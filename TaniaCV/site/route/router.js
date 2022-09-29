@@ -1,4 +1,6 @@
 import {Home} from "../pages/home.js"
+import {MyPath} from "../pages/my-path.js"
+import {Portafolio} from "../pages/portafolio.js"
 
 "use strict"
 
