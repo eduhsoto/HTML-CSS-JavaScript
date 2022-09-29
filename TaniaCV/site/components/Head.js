@@ -14,7 +14,7 @@ export class Head extends HTMLElement{
         return this.setAttribute('paragraph', val);
     }
 
-    setImage(){
+    setImage(val){
         return this.setAttribute('img', val);
     }
 
@@ -50,3 +50,5 @@ export class Head extends HTMLElement{
         </section>`
     }
 }
+
+customElements.define('head-element', Head);

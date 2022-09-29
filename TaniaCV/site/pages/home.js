@@ -21,7 +21,7 @@ export class Home extends HTMLElement{
     attributesHead(component){
         component.setTitle( `Hola! <br> Mi nombre es Tania y soy diseñadora UX`);
         component.setParagraph("Soy estudiante de Ingeniería en Desarrollo y Gestión de Software, resido actualmente en la ciudad de Guadalajara Jalisco México.");
-        component.setImage("../assets/img/profile-tania.png")
+        component.setImage("./assets/img/profile-tania.png")
       }
 
     disconnectedCallback(){
