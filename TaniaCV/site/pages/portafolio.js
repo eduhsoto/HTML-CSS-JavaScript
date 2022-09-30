@@ -21,7 +21,7 @@ export class Portafolio extends HTMLElement{
   attributesHead(component){
     component.setTitle(`Mi experiencia es laboral y académica, dale un vistazo a mis proyectos!`);
     component.setParagraph("Al trabajar para una empresa dedicada a la creación de soluciónes digitales pude obtener mi paión por el deseño UX / UI");
-    component.setImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9owL1zNQM6j6dF1c-IaEM3lmawGSuXpOLjg&usqp=CAU");
+    component.setImage("./assets/img/experience.jpg");
   }
   
   render(){

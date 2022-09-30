@@ -33,9 +33,6 @@ export class Home extends HTMLElement{
       </div>
       <h2>Técnico Superior Universitario</h2>
       <style>
-      .image{
-        width: 30%;
-      }
      </style>
       `
     }

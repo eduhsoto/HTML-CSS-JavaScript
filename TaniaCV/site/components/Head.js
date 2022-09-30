@@ -47,7 +47,14 @@ export class Head extends HTMLElement{
                 <h1 class="name">${this.getAttribute('title')}</h1>
                 <p class="description">${this.getAttribute('paragraph')}</p>
             </div>
-        </section>`
+        </section>
+        <style>
+        .image{
+            width: 50%;
+          }
+
+        </style>
+        `
     }
 }
 
