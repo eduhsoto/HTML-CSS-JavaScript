@@ -21,7 +21,7 @@ export class MyPath extends HTMLElement{
   attributesHead(component){
     component.setTitle("Mi trayectoria en el mundo laboral");
     component.setParagraph("Soy una persona creativa apasionada por crear experiencias que satisfagan las necesidades humanas al utilizar tecnología.");
-    component.setImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbnAVyRna7zQwFtQJQWxl72o_-7Fuo9VyBQ&usqp=CAU")
+    component.setImage("./assets/img/path-image.png")
   }
   
   disconnectedCallback(){
