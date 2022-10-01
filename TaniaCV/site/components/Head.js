@@ -33,7 +33,7 @@ export class Head extends HTMLElement{
     }
 
     getImage(){
-        this.$image.src = `${this.getAttribute('img')}`
+        this.$image.src = this.getAttribute('img');
     }
 
     disconnectedCallback(){
