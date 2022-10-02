@@ -27,12 +27,12 @@ export class Head extends HTMLElement{
 
     connectedCallback(){
         this.shadowRoot.innerHTML = this.render();
-        
-        this.$image = this.shadowRoot.querySelector('.image');
+
         this.getImage();
     }
 
     getImage(){
+        this.$image = this.shadowRoot.querySelector('.image');
         this.$image.src = this.getAttribute('img');
     }
 

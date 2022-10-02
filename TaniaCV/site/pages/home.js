@@ -1,5 +1,6 @@
 import {Head} from "../components/Head.js";
 import {Skill} from "../components/Skill.js"
+import {Objective} from "../components/Objective.js"
 
 export class Home extends HTMLElement{
     constructor(){
@@ -11,6 +12,7 @@ export class Home extends HTMLElement{
 
         this.generateHeadElement();
         this.generateSkillElement();
+        this.generateObjetiveElement();
     }
 
     generateHeadElement(){
@@ -44,7 +46,34 @@ export class Home extends HTMLElement{
 
       skillHard.setTitle("Habilidades técnicas");
       skillHard.setLi('["HTML, CSS, Bootstrap.", "Adobe XD.", "Figma.", "Invision Studio.", "Metodologías Ágiles (Manejo de tableros Scrum y Kanban).", "Design Thinking.", "Conocimiento de leyes cognitivas, creación de flujos, investigación de casos de uso y desarrollo de diseño visual."]');
-  }
+    }
+
+    generateObjetiveElement(){
+      this.$objetiveElement = this.querySelector('#objetives');
+
+      let objetiveGoal = new Objective();
+      let objetiveVision = new Objective();
+      let objetiveHonesty = new Objective();
+
+      this.attributesObjective(objetiveGoal, objetiveVision, objetiveHonesty);
+      this.$objetiveElement.appendChild(objetiveGoal);
+      this.$objetiveElement.appendChild(objetiveVision);
+      this.$objetiveElement.appendChild(objetiveHonesty);
+    }
+
+    attributesObjective(objetiveGoal, objetiveVision, objetiveHonesty){
+      objetiveGoal.setImage("./assets/img/goal.png");
+      objetiveGoal.setParagraph("Mi objetivo es desarrollar mi carrera profesiónal formando parte de una empresa que me permita aplicar lo que he aprendido y seguir creciendo de manera tanto profesiónal como personal.");
+      objetiveGoal.listed = false;
+
+      objetiveVision.setImage("./assets/img/vision.png");
+      objetiveVision.setParagraph("Crear diseños llamativos, intuitivos y funcionales que mejoren la experiencia de las personas que utilizan tecnología ayudando a lograr sus objetivos de manera rápida y eficaz.");
+      objetiveVision.listed = false;
+
+      objetiveHonesty.setImage("./assets/img/honesty.png");
+      objetiveHonesty.setParagraph("He aprendido a trabajar y vivir bajo valores que me permiten ser quien soy:");
+      objetiveHonesty.listed = true;
+    }
 
     disconnectedCallback(){
     }
@@ -67,9 +96,12 @@ export class Home extends HTMLElement{
                 <img src="./assets/img/ux-image.png" alt="ux image" class="ux__image">
             </div>
         </div>
+        <div id="skills">
+        </div>
+        <div id="objetives">
+        </div>
       </section>
-      <div id="skills">
-      </div>
+      
       <style>
      </style>
       `
