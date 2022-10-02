@@ -6,7 +6,7 @@ export class Skill extends HTMLElement{
         this.attachShadow({mode: "open"});
     }
 
-    setTitle(...val){
+    setTitle(val){
         return this.setAttribute('title', val);
     }
 
