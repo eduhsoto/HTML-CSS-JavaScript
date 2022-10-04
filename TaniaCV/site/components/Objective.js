@@ -49,14 +49,7 @@ export class Objective extends HTMLElement{
         if(this.listed !== false){
             let ul = document.createElement('ul');
             ul.classList.add("values");
-
-            itemsList.forEach(item => {
-                let li = document.createElement('li');
-                let content = document.createTextNode(item);
-                
-                li.appendChild(content);
-                ul.appendChild(li);
-            });
+            ul.innerHTML = `${itemsList.map(item => `<li>${item}</li>`).join('\n')}`
             this.$adyacenElement.insertAdjacentElement('afterend', ul)
         }
     }
