@@ -36,8 +36,6 @@ export class Path extends HTMLElement{
         return `
         <section class="path__timeline">
         <div class="container flex__columns">
-            <h2 class="title__grade">Mi trayectoria</h2>
-            
             <div class="card__">
                 <div class="card__timeline timeline1">
                     <h4 class="name__bussines">${this.getAttribute('title')}</h4>

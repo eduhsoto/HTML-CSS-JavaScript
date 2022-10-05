@@ -1,5 +1,6 @@
 import {Head} from "../components/Head.js";
 import {Path} from "../components/Path.js";
+import {Certificate} from "../components/Certificate.js"
 "use strict"
 
 export class MyPath extends HTMLElement{
@@ -12,6 +13,7 @@ export class MyPath extends HTMLElement{
     
     this.generateHeadElement();
     this.generatePathElement();
+    this.generateCertificateElement();
   }
   
   generateHeadElement(){
@@ -52,6 +54,34 @@ export class MyPath extends HTMLElement{
     c3.setParagraph("Diseño UX/UI: Creación de experiencias centradas en el usuario, utilizando herramientas cognitivas del pensamiento humano, psicología del color, técnicas para mejorar la usabilidad en la creación y seguimiento de procesos digitales para proporcionar herramientas que le sirvan a los desarrolladores e interesados para una visualización digital del diseño de las aplicaciones.<p>Maquetado de interfaces: Transformar el diseño de una web para que los navegadores puedan interpretarlos y reproducirlos correctamente en diferentes dispositivos.</p><p>Ayudante y estudiante de Analista de negocios: Creación de historias de usuario, desglosando el proceso en pequeñas partes utilizando la metodología de Design Thinking, generando soluciones de acuerdo a problemas previamente detectados, creación de propuestas en diseño visual ante nuevos requerimientos y creación de documentación.</p>");
 
   }
+
+  generateCertificateElement(){
+    this.$certificate = this.querySelector("#certificate");
+    let cerElement1 = new Certificate();
+    let cerElement2 = new Certificate();
+    let cerElement3 = new Certificate();
+    let cerElement4 = new Certificate();
+    this.attributesCertificate(cerElement1, cerElement2, cerElement3, cerElement4);
+    this.$path.appendChild(cerElement1);
+    this.$path.appendChild(cerElement2);
+    this.$path.appendChild(cerElement3);
+    this.$path.appendChild(cerElement4);
+  }
+
+  attributesCertificate(c1,c2,c3, c4){
+    c1.setImage("./assets/img/certificate-ibm-1.jpg");
+    c1.setHref("https://www.credly.com/badges/a8745ec5-4224-4c71-ac24-95948db4ab74?source=linked_in_profile");
+
+    c2.setImage("./assets/img/certificate-ibm-2.jpg");
+    c2.setHref("https://www.credly.com/badges/0684844f-1065-4de0-93a5-6455c8ab0a8e?source=linked_in_profile");
+
+    c3.setImage("./assets/img/certificate-ibm-3.jpg");
+    c3.setHref("https://www.credly.com/badges/4750689b-f467-45a8-b877-adbe3d807677?source=linked_in_profile");
+
+    c4.setImage("./assets/img/certificate-ibm-4.png");
+    c4.setHref("https://www.credly.com/badges/383741cb-3c1c-42ff-8a24-3f7b332717b2?source=linked_in_profile");
+
+  }
   
   disconnectedCallback(){
   }
@@ -60,9 +90,11 @@ export class MyPath extends HTMLElement{
     return `
     <div id="head">
     </div>
+    <h2 class="title">Mi trayectoria</h2>
     <div id="path">
     </div>
-    <div id="path">
+    <h2 class="title__grade">Áreas de conocimiento</h2>
+    <div id="certificate">
     </div>
     `
   }
