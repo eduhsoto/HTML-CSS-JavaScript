@@ -50,7 +50,7 @@ export class Objective extends HTMLElement{
             let ul = document.createElement('ul');
             ul.classList.add("values");
             ul.innerHTML = `${itemsList.map(item => `<li>${item}</li>`).join('\n')}`
-            this.$adyacenElement.insertAdjacentElement('afterend', ul)
+            this.$adyacenElement.insertAdjacentElement('afterend', ul);
         }
     }
 
