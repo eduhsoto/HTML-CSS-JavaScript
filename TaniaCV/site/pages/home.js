@@ -96,14 +96,11 @@ export class Home extends HTMLElement{
                 <img src="./assets/img/ux-image.png" alt="ux image" class="ux__image">
             </div>
         </div>
+      </section>
         <div id="skills">
         </div>
         <div id="objetives">
-        </div>
-      </section>
-      
-      <style>
-     </style>
+        </div>    
       `
     }
   }
