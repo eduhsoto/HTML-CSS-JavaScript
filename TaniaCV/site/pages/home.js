@@ -1,5 +1,5 @@
 import {Head} from "../components/Head.js";
-import {Skill} from "../components/Skill.js"
+//import {Skill} from "../components/Skill.js"
 import {Objective} from "../components/Objective.js"
 
 export class Home extends HTMLElement{
@@ -11,7 +11,7 @@ export class Home extends HTMLElement{
         this.innerHTML = this.render();
 
         this.generateHeadElement();
-        this.generateSkillElement();
+        //this.generateSkillElement();
         this.generateObjetiveElement();
     }
 
@@ -29,7 +29,7 @@ export class Home extends HTMLElement{
       component.setImage("./assets/img/profile-tania.png")
     }
 
-    generateSkillElement(){
+    /*generateSkillElement(){
       this.$skillElement = this.querySelector('#skills');
 
       let skillSoft = new Skill();
@@ -46,7 +46,7 @@ export class Home extends HTMLElement{
 
       skillHard.setTitle("Habilidades técnicas");
       skillHard.setLi('["HTML, CSS, Bootstrap.", "Adobe XD.", "Figma.", "Invision Studio.", "Metodologías Ágiles (Manejo de tableros Scrum y Kanban).", "Design Thinking.", "Conocimiento de leyes cognitivas, creación de flujos, investigación de casos de uso y desarrollo de diseño visual."]');
-    }
+    }*/
 
     generateObjetiveElement(){
       this.$objetiveElement = this.querySelector('#objetives');
@@ -97,8 +97,33 @@ export class Home extends HTMLElement{
             </div>
         </div>
       </section>
-        <div id="skills">
+      <section>
+        <div class="container">
+                <div class="skills">
+                    <h3 class="title__skills">Habilidades blandas</h3>
+                    <ul class="list__skills">
+                        <li>Excelente comunicación oral y escrita.</li>
+                        <li>Trabajo en equipo y capacidad de liderazgo.</li>
+                        <li>Desarrollo de experiencias centradas en el ser humano.</li>
+                        <li>Capacidad de autoaprendizaje.</li>
+                        <li>Pensamiento estratégico.</li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <h3 class="title__skills">Habilidades técnicas</h3>
+                    <ul class="list__skills">
+                        <li>HTML, CSS, Bootstrap.</li>
+                        <li>Adobe XD.</li>
+                        <li>Figma.</li>
+                        <li>Invision Studio.</li>
+                        <li>Metodologías Ágiles (Manejo de tableros Scrum y Kanban).</li>
+                        <li>Design Thinking.</li>
+                        <li>Conocimiento de leyes cognitivas, creación de flujos, investigación de casos de uso y desarrollo de diseño visual.</li>
+                    </ul>
+            </div>
         </div>
+      </section>
         <div id="objetives">
         </div>    
       `
