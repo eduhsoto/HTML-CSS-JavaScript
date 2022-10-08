@@ -22,7 +22,7 @@ export class Certificate extends HTMLElement{
     }
 
     connectedCallback(){
-        this.shadowRoot.innerHTML = this.render();
+        this.shadowRoot.innerHTML = `${this.render()} ${this.styles()}`;
 
         this.getImage();
         this.getHref();
@@ -43,16 +43,48 @@ export class Certificate extends HTMLElement{
 
     render(){
         return `
-        <section class="certificates">
-            <div class="container flex__columns">
-                <div class="certificates__row">
-                    <div class="certificate__group">
-                        <img class="certificate__image">
-                        <a class="certificate__link" target="_blank">Ver</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="certificate__group">
+            <img class="certificate__image">
+            <a class="certificate__link" target="_blank">Ver</a>
+        </div>             
+        `
+    }
+
+    styles(){
+        return `
+        <style>
+
+        .certificate__group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .certificate__image{
+            width: 80%;
+        }
+
+        .certificate__link {
+            padding: 10px 10px;
+            width: 50%;
+            text-align: center;
+            border: 1px solid var(--complementary_color);
+            color: var(--complementary_color);
+            border-radius: 5px;
+            transition: .3s;
+            text-decoration: none;
+            margin: 20px 0px;
+            font-weight: 600;
+        }
+
+        .certificate__link:hover{
+            background-color: var(--complementary_color);
+            color: var(--primary_color);
+        }
+
+        </style>
+        
         `
     }
 }

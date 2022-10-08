@@ -125,8 +125,8 @@ export class Home extends HTMLElement{
         </div>
       </section>
       
-      <section class="objetives"> 
-      <div id="objectives">
+      <section class="objectives"> 
+      <div id="objectives" class="container">
       </div>
       </section>    
       `
