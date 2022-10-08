@@ -49,7 +49,7 @@ export class Home extends HTMLElement{
     }*/
 
     generateObjetiveElement(){
-      this.$objetiveElement = this.querySelector('#objetives');
+      this.$objetiveElement = this.querySelector('#objectives');
 
       let objetiveGoal = new Objective();
       let objetiveVision = new Objective();
@@ -121,11 +121,14 @@ export class Home extends HTMLElement{
                         <li>Design Thinking.</li>
                         <li>Conocimiento de leyes cognitivas, creación de flujos, investigación de casos de uso y desarrollo de diseño visual.</li>
                     </ul>
-            </div>
+                </div>
         </div>
       </section>
-        <div id="objetives">
-        </div>    
+      
+      <section class="objetives"> 
+      <div id="objectives">
+      </div>
+      </section>    
       `
     }
   }
