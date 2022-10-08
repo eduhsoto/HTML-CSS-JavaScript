@@ -1,4 +1,4 @@
-//problem with styles
+//not recommend use as component
 /*"use strict"
 export class Skill extends HTMLElement{
     constructor(){

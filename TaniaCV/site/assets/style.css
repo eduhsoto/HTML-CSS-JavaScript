@@ -87,11 +87,17 @@ a{
     display: none;
 }
 
-.container {
+.container{
     margin: 30px 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--space_elements);
+}
+
+#objectives{
+    margin: 30px 120px;
+    display: flex;
     padding: var(--space_elements);
 }
 
@@ -120,8 +126,6 @@ a{
 .about__me {
     box-shadow: var(--box_shadow);
 }
-
-
 
 .title__grade {
     font-weight: 600;

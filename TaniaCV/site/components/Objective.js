@@ -1,3 +1,4 @@
+//not recommend use as component
 "use strict"
 export class Objective extends HTMLElement{
     constructor(){
@@ -31,7 +32,7 @@ export class Objective extends HTMLElement{
     }
 
     connectedCallback(){
-        this.shadowRoot.innerHTML = this.render();
+        this.shadowRoot.innerHTML = `${this.render()} ${this.styles()}`
 
         this.getImage();
         this.generateList();
@@ -59,14 +60,57 @@ export class Objective extends HTMLElement{
 
     render(){
         return `
-        <section class="objetives">
-        <div class="container">
-            <div class="card__objetives">
-                <img  alt="goal image" class="card__image">
-                <p class="text__objetives">${this.getAttribute('paragraph')}</p>
-            </div>
-        </div>
-    </section>
+                <div class="card__objectives">
+                    <img  alt="goal image" class="card__image">
+                    <p class="text__objetives">${this.getAttribute('paragraph')}</p>
+                </div>
+        `
+    }
+
+    styles(){
+        return `
+        <style>
+        :host{
+            --background: linear-gradient(180deg, rgba(202, 99, 167, 0.1) 0%, rgba(248, 190, 122, 0.1) 100%);
+            --space_elements: 30px 0px;
+            --primary_color: #FFFFFF;
+            --text_color: #939393;
+
+            display:flex;
+            justify-content: space-evenly;
+            align-self: stretch;
+            width:100%  
+        }
+
+        .card__objectives{
+            padding: 1.25em 2.5em;
+            border: 1px solid #49494940;
+            width: 60%;
+
+            background-color: var(--primary_color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card__image {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        p, .values {
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 24px;
+            color: var(--text_color);
+            margin-bottom: 20px;
+        }
+
+        .values{
+            list-style: none; 
+        }
+    
+        </style>
         `
     }
 }
