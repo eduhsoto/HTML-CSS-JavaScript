@@ -32,7 +32,7 @@ export class Objective extends HTMLElement{
     }
 
     connectedCallback(){
-        this.shadowRoot.innerHTML = `${this.render()} ${this.styles()}`
+        this.shadowRoot.innerHTML = `${this.render()} ${this.styles()}`;
 
         this.getImage();
         this.generateList();
@@ -71,11 +71,6 @@ export class Objective extends HTMLElement{
         return `
         <style>
         :host{
-            --background: linear-gradient(180deg, rgba(202, 99, 167, 0.1) 0%, rgba(248, 190, 122, 0.1) 100%);
-            --space_elements: 30px 0px;
-            --primary_color: #FFFFFF;
-            --text_color: #939393;
-
             display:flex;
             justify-content: space-evenly;
             align-self: stretch;
