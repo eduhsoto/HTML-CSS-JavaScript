@@ -4,6 +4,7 @@ export class Head extends HTMLElement{
         super();
 
         this.attachShadow({mode: "open"});
+        this._headReverse = true;
     }
 
     setTitle(val){
@@ -18,6 +19,14 @@ export class Head extends HTMLElement{
         return this.setAttribute('img', val);
     }
 
+    set headReverse(val){
+        return this._headReverse = val;
+    }
+
+    get headReverse(){
+        return this._headReverse;
+    }
+
     static get observedAttributes() {
         return [''];
     }
@@ -29,11 +38,22 @@ export class Head extends HTMLElement{
         this.shadowRoot.innerHTML = `${this.render()} ${this.styles()}`;
 
         this.getImage();
+        this.rowReverse();
     }
 
     getImage(){
         this.$image = this.shadowRoot.querySelector('.image');
         this.$image.src = this.getAttribute('img');
+    }
+
+    rowReverse(){
+        if(this.headReverse){
+            this.$head = this.shadowRoot.querySelector('.head');
+            this.$description = this.shadowRoot.querySelector('.description');
+
+            this.$head.classList.add('reverse');
+            this.$description.classList.replace('description', 'description__reverse');
+        }
     }
 
     disconnectedCallback(){
@@ -73,6 +93,15 @@ export class Head extends HTMLElement{
             align-items: center;
             padding: var(--space_elements);
             background: var(--background_color_head);
+        }
+
+        .reverse{
+            flex-direction: row-reverse;
+        }
+
+        .description__reverse{
+            background: linear-gradient(-270deg, rgba(243, 90, 126, 0.98) 26.24%, rgba(249, 175, 122, 0) 94.14%);
+            padding: 80px 80px;
         }
         
         .description{
