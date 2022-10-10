@@ -145,6 +145,10 @@ p {
     margin-bottom: 20px;
 }
 
+.objectives{
+    background: linear-gradient(180deg, rgba(202, 99, 167, 0.1) 0%, rgba(248, 190, 122, 0.1) 100%);
+}
+
 .flex__columns{
     flex-direction: column;
 }

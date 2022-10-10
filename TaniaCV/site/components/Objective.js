@@ -89,7 +89,7 @@ export class Objective extends HTMLElement{
         }
 
         .card__image {
-            width: 50%;
+            width: 40%;
             margin-bottom: 20px;
         }
 

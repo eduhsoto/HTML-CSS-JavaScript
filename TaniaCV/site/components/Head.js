@@ -83,25 +83,26 @@ export class Head extends HTMLElement{
         }
         
         .image{
-            width: 34%;
-            margin: 0px 50px;
+            width: 60%;
           }
 
         .head{
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-items: center;
             align-items: center;
             padding: var(--space_elements);
             background: var(--background_color_head);
+            gap: 20px;
         }
 
         .reverse{
-            flex-direction: row-reverse;
+            direction: rtl;
         }
 
         .description__reverse{
             background: linear-gradient(-270deg, rgba(243, 90, 126, 0.98) 26.24%, rgba(249, 175, 122, 0) 94.14%);
-            padding: 80px 80px;
+            padding: 5em 5em;
         }
         
         .description{
