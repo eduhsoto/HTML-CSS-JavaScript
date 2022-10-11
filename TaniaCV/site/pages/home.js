@@ -85,7 +85,7 @@ export class Home extends HTMLElement{
       </div>
       <section class="about__me">
         <div class="container">
-            <div class="about__left">
+            <div class="about">
                 <h2 class="title__grade">Técnico Superior Universitario</h2>
                 <p class="title__specialization">Especialista UX / UI orientada en el ser humano.</p>
                 <p>Soy estudiante de Ingeniería en Tecnologías de la comunicación, área desarrollo y gestión de software.</p>
@@ -93,9 +93,7 @@ export class Home extends HTMLElement{
                 <p>Mi pasión es crear y mejorar experiencias de los usuarios, pensando en el ser humano que utiliza las aplicaciones por medio de la tecnología, agilizando los procesos con diseños funcionales y atractivos.</p>
             </div>
 
-            <div class="about__right">
-                <img src="./assets/img/ux-image.png" alt="ux image" class="ux__image">
-            </div>
+                <img src="./assets/img/ux-image.png" alt="ux image" class="ux__image about">
         </div>
       </section>
       <section>
