@@ -88,7 +88,7 @@ export class Head extends HTMLElement{
 
         .head{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(261px, 1fr));
             justify-items: center;
             align-items: center;
             padding: var(--space_elements);

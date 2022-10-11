@@ -53,12 +53,12 @@ export class Certificate extends HTMLElement{
     styles(){
         return `
         <style>
-
         .certificate__group {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            
         }
 
         .certificate__image{

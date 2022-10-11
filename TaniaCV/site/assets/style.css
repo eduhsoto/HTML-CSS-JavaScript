@@ -91,16 +91,19 @@ a{
 .container{
     margin: 30px 120px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: var(--space_elements);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2em;
 }
 
 .skills {
     padding: 1.25em 2.5em;
     border: 1px solid #49494940;
-    width: 30%;
     align-self: stretch;
+
+    max-width: 400px; 
 }
 
 .title__skills {
@@ -120,6 +123,16 @@ a{
 
 .about__me {
     box-shadow: var(--box_shadow);
+}
+
+.about{
+    flex-basis: 50%;
+    flex-grow: 1;
+}
+
+.ux__image{
+    width: 200px;
+    max-width: 400px;
 }
 
 .title__grade {
@@ -195,9 +208,11 @@ p {
 
 .certificates__row{
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
-
+    
 footer {
     margin: 0px 120px;
 }
@@ -245,4 +260,25 @@ footer {
 
 .rights {
     text-align: center;
+}
+
+@media screen and (max-width: 540px){
+.lines {
+    display: none;
+}
+.card {
+    flex-direction: column;
+}
+
+.card__timeline {
+    margin-bottom: 30px;
+}
+
+.timeline3 {
+    margin-top: 30px;
+}
+
+.container {
+    margin: 30px 16px;
+}
 }
