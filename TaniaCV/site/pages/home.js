@@ -16,7 +16,7 @@ export class Home extends HTMLElement{
     }
 
     generateHeadElement(){
-      this.$headElement = this.querySelector('#head');
+      this.$headElement = this.querySelector('.head');
 
       let headElement = new Head();
       this.attributesHead(headElement);
@@ -81,7 +81,7 @@ export class Home extends HTMLElement{
     
     render(){
       return `
-      <div id="head">
+      <div class="head">
       </div>
       <section class="about__me">
         <div class="container">

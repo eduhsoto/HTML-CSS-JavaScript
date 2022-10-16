@@ -94,6 +94,7 @@ export class Head extends HTMLElement{
             padding: var(--space_elements);
             background: var(--background_color_head);
             gap: 20px;
+            height: 500px;
         }
 
         .reverse{
@@ -102,12 +103,12 @@ export class Head extends HTMLElement{
 
         .description__reverse{
             background: linear-gradient(-270deg, rgba(243, 90, 126, 0.98) 26.24%, rgba(249, 175, 122, 0) 94.14%);
-            padding: 5em 5em;
+            padding: 5em 4em;
         }
         
         .description{
             background: linear-gradient(270deg, rgba(243, 90, 126, 0.98) 26.24%, rgba(249, 175, 122, 0) 94.14%);
-            padding: 5em 5em;
+            padding: 5em 4em;
             text-align: right;
         }
 

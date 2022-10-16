@@ -8,7 +8,7 @@ export class Portafolio extends HTMLElement{
   
   connectedCallback(){
     this.innerHTML = this.render();
-    this.$globalSection = this.querySelector("#head");
+    this.$globalSection = this.querySelector(".head");
     this.generateHeadElement();
   }
   
@@ -27,7 +27,7 @@ export class Portafolio extends HTMLElement{
   
   render(){
     return `
-    <section id="head">
+    <section class="head">
     </section>
     `
   }

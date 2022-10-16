@@ -17,7 +17,7 @@ export class MyPath extends HTMLElement{
   }
   
   generateHeadElement(){
-    this.$globalSection = this.querySelector("#head");
+    this.$globalSection = this.querySelector(".head");
     let headElement = new Head();
     this.attributesHead(headElement);
     this.$globalSection.appendChild(headElement);
@@ -92,7 +92,7 @@ export class MyPath extends HTMLElement{
   
   render(){
     return `
-    <div id="head">
+    <div class="head">
     </div>
     <!--<section> 
       <div id="path" class="container">

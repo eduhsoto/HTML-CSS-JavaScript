@@ -26,8 +26,7 @@ export class Router{
         
         this.defaultPage();
         
-        const $links = document.querySelectorAll('a.item');
-        
+        const $links = document.querySelectorAll('a.item');    
         $links.forEach(link => {
         link.addEventListener("click", e => this.navigate(e, link));
         })
@@ -35,23 +34,43 @@ export class Router{
 
     navigate(e, link){
         e.preventDefault();
+        let state = link.getAttribute("href");
         window.history.pushState({}, "", e.target.href);
-        this.url(link);
+        this.url(link);   
+        this.activeLink(link); 
+        this.backForward();
     }
     
     url(link) {
         let hrf = link.getAttribute("href");
-        let location = window.location.pathname;
-        location = hrf;
-            
-        this.defaultPage(hrf, location);
+        this.defaultPage(hrf);
+    }
+
+    activeLink(){
+        let currentLocation = window.location.pathname;
+        const $links = document.querySelectorAll('a.item');
+        $links.forEach(link => {
+        link.classList.remove('active__page');
+        let linkRoute = link.getAttribute('href');
+           if(linkRoute === currentLocation){
+            link.classList.add('active__page');
+           }
+        })
     }
       
-    defaultPage(hrf = "/", location){
-        location = hrf;
-        
+    defaultPage(location = "/"){
         const {routes} = this;
         const route = routes[location];
-        Router.injectHTML(new route.page);  
+        Router.injectHTML(new route.page); 
+    }
+
+    backForward(){  
+        window.onpopstate = (e) => {
+            if(e.isTrusted){ 
+                let oldPage = e.target.location.pathname;
+                this.defaultPage(oldPage);
+                this.activeLink();
+            }
+        }
     }
 }
