@@ -1,2 +1,9 @@
 TaniaCV/site/assets/img
 Bax/site/assets/img
+
+# Ignore files for do test at root server
+index.php
+assets/
+controllers/
+models/
+views/
