@@ -18,7 +18,6 @@ class Router{
         ];
 
         $uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : "/";
-        echo $uri;
         
         if($uri == "/index.php"){
             echo '<script> window.location = "/" </script>';
@@ -43,4 +42,5 @@ class Router{
     }
 
 }
+
 ?>
