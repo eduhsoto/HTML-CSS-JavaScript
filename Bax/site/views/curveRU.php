@@ -1,0 +1,1 @@
+<img src="./assets/img/curveRU.svg" alt="curve right up" class="curves">
