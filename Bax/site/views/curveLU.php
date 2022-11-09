@@ -1,0 +1,1 @@
+<img src="./assets/img/curveLU.svg" alt="curve left up" class="curves">
