@@ -10,22 +10,3 @@ export const showMenu = () => {
 
     $hamburger.addEventListener('click', showHidden);
 } 
-
-
-export const animationScroll = () =>{
-    const $head = document.querySelector('.head');
-          
-    const visibility = (entries, observer) =>{
-        entries.forEach((element) => {
-            if(element.isIntersecting){
-                element.target.classList.add('fade');
-            }else{
-                element.target.classList.remove('fade');
-            }
-        })
-    }
-
-    const observed = new IntersectionObserver(visibility);
-    observed.observe($head);
-}
-
